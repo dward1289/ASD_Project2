@@ -7,9 +7,28 @@ $.ajax({
 		type: "GET",
 		url: "data/saved.json",
 		dataType: "json",
-		success: function (packedOn) {
-			$(json).html().appendTo("#thisJSON");
-		}
+		success: function (result) {
+
+                for ( var i = 0, len = result.tasks.length; i < len; i++ ) {
+                    var item = result.tasks[i];
+
+                    $( ' ' + 
+					'<div class="tasksIn">' +
+					'<ul>' +
+					'<li> Name of Task: ' + item.name[1] + '</li>' +
+					'<li> Category: ' + item.category[1] + '</li>' +
+					'<li> Priority: ' + item.priorityLevel[1] + '</li>' +
+					'<li> Start: ' + item.startUp[1] + '</li>' +
+					'<li> End: ' + item.ending[1] + '</li>' +
+					'<li> Alert: ' + item.alertOption[1] + '</li>' +
+					'<li> Note: ' + item.note[1] + '</li>' +
+					'</ul>' +
+					'<hr />' +
+					'</div>'
+					).appendTo("#thisJSON");
+                }
+            }
+				
 		});
 }
 	$("#jsonB").on("click", jsonD);
@@ -22,13 +41,6 @@ $.ajax({
 		dataType: "xml",
 		success: function (xml) {
 			$(xml).find('item').each(function() {
-				var noT = "Name of Task:";
-				var caT = "Category:";
-				var prI = "Priority:";
-				var star = "Start:";
-				var end = "End:";
-				var ale = "Alert:";
-				var noE = "Note:";
 				var xName = $(this).find('name').text();
 				var xCategory = $(this).find('category').text();
 				var xPriority = $(this).find('priority').text();
@@ -36,14 +48,20 @@ $.ajax({
 				var xEnd = $(this).find('ending').text();
 				var xAlert = $(this).find('alert').text();
 				var xNote = $(this).find('note').text();
-				$("<li>").text(noT + " " + xName).appendTo("#thisXML");
-				$("<li>").text(caT + " " + xCategory).appendTo("#thisXML");
-				$("<li>").text(prI + " " + xPriority).appendTo("#thisXML");
-				$("<li>").text(star + " " + xStart).appendTo("#thisXML");
-				$("<li>").text(end + " " + xEnd).appendTo("#thisXML");
-				$("<li>").text(ale + " " + xAlert).appendTo("#thisXML");
-				$("<li>").text(noE + " " + xNote).appendTo("#thisXML");
-				
+				$(' '+
+				'<div class="tasksIn">' +
+					'<ul>' +
+					'<li> Name of Task: ' + xName + '</li>' +
+					'<li> Category: ' + xCategory+ '</li>' +
+					'<li> Priority: ' + xPriority + '</li>' +
+					'<li> Start: ' + xStart + '</li>' +
+					'<li> End: ' + xEnd + '</li>' +
+					'<li> Alert: ' + xAlert + '</li>' +
+					'<li> Note: ' + xNote + '</li>' +
+					'</ul>' +
+					'<hr />' +
+					'</div>'
+					).appendTo("#thisXML");
 			}
 		)}
 		
@@ -51,7 +69,41 @@ $.ajax({
 }
 	$("#xml").on("click", xmlD);
 
+var csvD = function () {
+$.ajax({
+		type: "GET",
+		url: "data/savedlist.csv",
+		dataType: "text",
+		success: function (data) {
+			var line = data.split("\n");
+			var cRow = line[0];
+			var cCol = cRow.split(",");
+			for(var lnum = 1; lnum<line.length; lnum++){
+				var row = line[lnum];
+				var column = row.split(",");
+			$(' '+
+					'<div class="taskIn">' +
+					'<ul>' +
+					'<li>' + cCol[0] + " " + column[0] + '</li>' +
+					'<li>' + cCol[1] + " " + column[1] + '</li>' +
+					'<li>' + cCol[2] + " " + column[2] + '</li>' +
+					'<li>' + cCol[3] + " " + column[3] + '</li>' +
+					'<li>' + cCol[4] + " " + column[4] + '</li>' +
+					'<li>' + cCol[5] + " " + column[5] + '</li>' +
+					'<li>' + cCol[6] + " " + column[6] + '</li>' +
+					'</ul>' +
+					'<hr />' +
+					'</div>'
+					).appendTo("#thisCSV");
+			
+			}
+			
+			}
+		
+		});
+		}
 
+	$("#csv").on("click", csvD);
 	
 	//getElementById function
 	var elId = function (n) {

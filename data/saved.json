@@ -1,6 +1,7 @@
-
+{
+	"tasks": [
 		
-	"task": {
+	{
 		"name": ["Name of Task: ", "Homework"],
 		"category": ["Category: ", "School"],
 		"priorityLevel": ["Priority: ", "High"],
@@ -10,7 +11,7 @@
 		"note": ["Notes: ", "Finish project"]
 	},
 	
-	"task": {
+	 {
 		"name": ["Name of Task: ", "Meeting"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "High"],
@@ -20,7 +21,7 @@
 		"note": ["Notes: ", "Get updates"]
 	},
 	
-	"task": {
+	 {
 		"name": ["Name of Task: ", "Play SR3"],
 		"category": ["Category: ", "Home"],
 		"priorityLevel": ["Priority: ", "Low"],
@@ -29,7 +30,7 @@
 		"alertOption": ["Type of Alert: ", "1"],
 		"note": ["Notes: ", "Take a break"]
 	},
-	"task": {
+	 {
 		"name": ["Name of Task: ", "Finish Project"],
 		"category": ["Category: ", "School"],
 		"priorityLevel": ["Priority: ", "High"],
@@ -39,7 +40,7 @@
 		"note": ["Notes: ", "Add two more files."]
 	},
 	
-	"task": {
+	 {
 		"name": ["Name of Task: ", "Setup"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "High"],
@@ -49,7 +50,7 @@
 		"note": ["Notes: ", "Prepare for the new releases, and make sure it's perfect."]
 	},
 		
-	"task": {
+	{
 		"name": ["Name of Task: ", "Movie Night"],
 		"category": ["Category: ", "Home"],
 		"priorityLevel": ["Priority: ", "Low"],
@@ -58,7 +59,7 @@
 		"alertOption": ["Type of Alert: ", "1"],
 		"note": ["Notes: ", "Pick out movies, and popcorn."]
 	},
-	"task": {
+	 {
 		"name": ["Name of Task: ", "Check E-mail"],
 		"category": ["Category: ", "School"],
 		"priorityLevel": ["Priority: ", "High"],
@@ -68,7 +69,7 @@
 		"note": ["Notes: ", "Look for a message about grades. Hopefully good news!"]
 	},
 	
-	"task": {
+	{
 		"name": ["Name of Task: ", "Training"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "Medium"],
@@ -78,7 +79,7 @@
 		"note": ["Notes: ", "Sales and computers are the main topics."]
 	},
 	
-	"task": {
+	{
 		"name": ["Name of Task: ", "Play Max Payne"],
 		"category": ["Category: ", "Home"],
 		"priorityLevel": ["Priority: ", "Low"],
@@ -87,7 +88,7 @@
 		"alertOption": ["Type of Alert: ", "1"],
 		"note": ["Notes: ", "Haven't played this game is a while."]
 	},
-	"task": {
+	{
 		"name": ["Name of Task: ", "Party Night"],
 		"category": ["Category: ", "Home"],
 		"priorityLevel": ["Priority: ", "High"],
@@ -97,7 +98,7 @@
 		"note": ["Notes: ", "Drake is suppose to be there. Can't miss it!"]
 	},
 	
-	"task": {
+	{
 		"name": ["Name of Task: ", "Carpool Week"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "Medium"],
@@ -107,7 +108,7 @@
 		"note": ["Notes: ", "It's Jimmy turn to drive and he will be here at 8:00 a.m."]
 	},
 	
-	"task": {
+	{
 		"name": ["Name of Task: ", "Two Year Anniversary"],
 		"category": ["Category: ", "Home"],
 		"priorityLevel": ["Priority: ", "Medium"],
@@ -116,7 +117,7 @@
 		"alertOption": ["Type of Alert: ", "1"],
 		"note": ["Notes: ", "Helicopter tour, and dinner at Olive Garden."]
 	},
-	"task": {
+	{
 		"name": ["Name of Task: ", "Halloween Partys"],
 		"category": ["Category: ", "Home"],
 		"priorityLevel": ["Priority: ", "Medium"],
@@ -126,7 +127,7 @@
 		"note": ["Notes: ", "Pickup Spiderman costume and snacks."]
 	},
 	
-	"task": {
+	{
 		"name": ["Name of Task: ", "Meeting"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "High"],
@@ -136,7 +137,7 @@
 		"note": ["Notes: ", "Prepare for the holiday sales."]
 	},
 	
-	"task": {
+	{
 		"name": ["Name of Task: ", "Time for an upgrade"],
 		"category": ["Category: ", "Home"],
 		"priorityLevel": ["Priority: ", "Low"],
@@ -145,7 +146,7 @@
 		"alertOption": ["Type of Alert: ", "1"],
 		"note": ["Notes: ", "I need to upgrade both phones."]
 	},
-	"task": {
+	 {
 		"name": ["Name of Task: ", "Plans for new app"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "Low"],
@@ -155,7 +156,7 @@
 		"note": ["Notes: ", "Back to the drawing board."]
 	},
 	
-	"task": {
+	 {
 		"name": ["Name of Task: ", "Dinner Party"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "Medium"],
@@ -165,7 +166,7 @@
 		"note": ["Notes: ", "Formal attire only."]
 	},
 	
-	"task": {
+	{
 		"name": ["Name of Task: ", "Think of new layout"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "Low"],
@@ -174,7 +175,7 @@
 		"alertOption": ["Type of Alert: ", "1"],
 		"note": ["Notes: ", "Code has been completed. Think of three different layouts."]
 	},
-	"task": {
+	{
 		"name": ["Name of Task: ", "Christmas break"],
 		"category": ["Category: ", "School"],
 		"priorityLevel": ["Priority: ", "Medium"],
@@ -184,7 +185,7 @@
 		"note": ["Notes: ", "Keep studying and still have fun."]
 	},
 	
-	"task": {
+	 {
 		"name": ["Name of Task: ", "Final Touches"],
 		"category": ["Category: ", "Business"],
 		"priorityLevel": ["Priority: ", "Medium"],
@@ -194,3 +195,5 @@
 		"note": ["Notes: ", "Fix errors and make sure layout is perfect."]
 
 	}
+]
+}

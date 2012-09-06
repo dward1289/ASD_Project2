@@ -1,40 +1,51 @@
 //Wait until the DOM is ready
 $("#home").on('pageinit', function(){
 
+
 var jsonD = function () {
 $.ajax({
 		type: "GET",
 		url: "data/saved.json",
-		dataType: "JSON",
-		success: function (json) {
-		var obj = JSON.stringify(task1);
-		console.log(obj);
+		dataType: "json",
+		success: function (packedOn) {
+			$(json).html().appendTo("#thisJSON");
 		}
 		});
 }
 	$("#jsonB").on("click", jsonD);
 
-var csvD = function () {
-$.ajax({
-		type: "GET",
-		url: "data/savedlist.csv",
-		dataType: "text",
-		success: function (packedOn) {
-			$('#thisCSV').append($(packedOn).text());
-		}
-		
-		});
-}
-	$("#csv").on("click", csvD);
 
 var xmlD = function () {
 $.ajax({
 		type: "GET",
 		url: "data/savedtasks.xml",
 		dataType: "xml",
-		success: function (packedUp) {
-			$('#thisXML').append($(packedUp).text());
-		}
+		success: function (xml) {
+			$(xml).find('item').each(function() {
+				var noT = "Name of Task:";
+				var caT = "Category:";
+				var prI = "Priority:";
+				var star = "Start:";
+				var end = "End:";
+				var ale = "Alert:";
+				var noE = "Note:";
+				var xName = $(this).find('name').text();
+				var xCategory = $(this).find('category').text();
+				var xPriority = $(this).find('priority').text();
+				var xStart = $(this).find('start').text();
+				var xEnd = $(this).find('ending').text();
+				var xAlert = $(this).find('alert').text();
+				var xNote = $(this).find('note').text();
+				$("<li>").text(noT + " " + xName).appendTo("#thisXML");
+				$("<li>").text(caT + " " + xCategory).appendTo("#thisXML");
+				$("<li>").text(prI + " " + xPriority).appendTo("#thisXML");
+				$("<li>").text(star + " " + xStart).appendTo("#thisXML");
+				$("<li>").text(end + " " + xEnd).appendTo("#thisXML");
+				$("<li>").text(ale + " " + xAlert).appendTo("#thisXML");
+				$("<li>").text(noE + " " + xNote).appendTo("#thisXML");
+				
+			}
+		)}
 		
 		});
 }
